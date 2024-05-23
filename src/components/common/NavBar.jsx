@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FcDonate } from "react-icons/fc";
 import { BiSolidDonateHeart } from "react-icons/bi";
 import { useLocation } from "react-router-dom";
+import Popup from "../display/PopUp";
 const NavBar = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
   const location = useLocation();
   const pathName = location.pathname;
   const checkPath = (path) => {
@@ -17,7 +27,7 @@ const NavBar = () => {
     }
   };
   return (
-    <nav className=" bg-white mt-2">
+    <nav className=" bg-white mt-2 relative">
       <div className="flex justify-around  mx-auto xl:max-w-[75%]">
         <div className="flex justify-center items-center p-2">
           {/* <div>
@@ -68,8 +78,15 @@ const NavBar = () => {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
-        <div className="flex right-0 text-white justify-center items-center text-sm bg-blue-700 p-4 py-2 rounded-lg cursor-pointer hover:bg-blue-900 shadow-md hover:shadow-xl transition-all ease-in-out duration-300">
+
+        <div
+          onClick={openPopup}
+          className="flex right-0 text-white justify-center items-center text-sm bg-blue-700 p-4 py-2 rounded-lg cursor-pointer hover:bg-blue-900 shadow-md hover:shadow-xl transition-all ease-in-out duration-300"
+        >
           <p>Donate</p>
+        </div>
+        <div>
+          <Popup isOpen={isPopupOpen} onClose={closePopup} />
         </div>
       </div>
     </nav>
