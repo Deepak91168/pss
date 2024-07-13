@@ -11,6 +11,8 @@ import PercentageBar from "../components/charts/PercentageBar";
 import FAQ from "../components/feedback/FAQ";
 import Quote from "../components/display/Quote";
 import Crousel from "../components/display/Crousel";
+import { FaRupeeSign } from "react-icons/fa";
+import PopUp from "../components/display/PopUp";
 const faqData = [
   {
     question: "What is your return policy?",
@@ -31,8 +33,10 @@ const Home = () => {
   return (
     <div>
       <div className="min-h-screen">
+        <hr />
         <HeroSection />
-        <div className="flex flex-col flex-wrap sm:flex-row justify-center items-center mx-auto p-2 sm:p-2 md:max-w-[70%] xl:max-w-[50%]">
+
+        <div className="flex flex-col flex-wrap sm:flex-row justify-center items-center mx-auto p-2 sm:p-2 w-full md:max-w-[100%] xl:max-w-[60%]">
           <MissionCard
             customClass={"flex justify-center bg-yellow-700 item-center"}
             icon={<IoSchool className="text-4xl" />}
@@ -63,24 +67,15 @@ const Home = () => {
             icon={<MdConstruction className="text-4xl" />}
             missionName="Develop real-world skills and secure employment opportunities"
           />
+          <MissionCard
+            customClass={"flex justify-center bg-blue-800 item-center"}
+            icon={<FaRupeeSign className="text-4xl" />}
+            missionName="Providing Financial assistance to the poor and needy"
+          />
         </div>
         <div>
           <Crousel />
         </div>
-        {/* <div className="mt-6">
-          <Quote
-            author={"Nelson Mandela"}
-            description={
-              "Education is the most powerful weapon which you can use to change the world"
-            }
-          />
-          <Quote
-            author={"Mahatma Gandhi"}
-            description={
-              "The best way to find yourself is to lose yourself in the service of others"
-            }
-          />
-        </div> */}
       </div>
       <div className="min-h-screen bg-slate-200 pb-4">
         <div className="text-center text-2xl font-bold pt-6">
@@ -174,41 +169,41 @@ const Home = () => {
             <hr className="w-[150px] border-[0.5px] mx-auto mt-2" />
           </div>
           <div className="flex flex-wrap justify-center items-center mx-auto mt-6 max-w-[75%]">
-            <div className="font-normal mt-2 p-4 border-2 rounded-lg shadow-md w-[300px]">
+            <div className="font-normal mt-2 p-4 border-2 rounded-lg shadow-md w-[300px] bg-blue-200">
               <div className="text-xl font-mono font-bold">1500K</div>
               <div className="text-sm">
                 Childrens and their families impacted
               </div>
             </div>
-            <div className="font-normal mt-2 p-4 border-2 rounded-lg shadow-md">
+            <div className="font-normal mt-2 p-4 border-2 rounded-lg shadow-md bg-blue-200">
               <div className="text-xl font-mono font-bold">500+</div>
               <div className="text-sm">
                 Villages and slums reached accross India
               </div>
             </div>
-            <div className="font-normal mt-2 p-4 border-2 rounded-lg shadow-md">
+            <div className="font-normal mt-2 p-4 border-2 rounded-lg shadow-md bg-blue-200">
               <div className="text-xl font-mono font-bold">20+</div>
               <div className="text-sm">
                 States reached including remote areas
               </div>
             </div>
-            <div className="font-normal mt-2 p-4 border-2 rounded-lg shadow-md">
+            <div className="font-normal mt-2 p-4 border-2 rounded-lg shadow-md bg-blue-200">
               <div className="text-xl font-mono font-bold">6K+</div>
               <div className="text-sm">Active Volunteers and supporters</div>
             </div>
-            <div className="font-normal mt-2 p-4 border-2 rounded-lg shadow-md">
+            <div className="font-normal mt-2 p-4 border-2 rounded-lg shadow-md bg-blue-200">
               <div className="text-xl font-mono font-bold">100K+</div>
               <div className="text-sm">
                 Worth Study material and resources distributed across India
               </div>
             </div>
-            <div className="font-normal mt-2 p-4 border-2 rounded-lg shadow-md">
+            <div className="font-normal mt-2 p-4 border-2 rounded-lg shadow-md bg-blue-200">
               <div className="text-xl font-mono font-bold">25K+</div>
               <div className="text-sm">
                 Supporters and followers on social media
               </div>
             </div>
-            <div className="font-normal mt-2 p-4 border-2 rounded-lg shadow-md">
+            <div className="font-normal mt-2 p-4 border-2 rounded-lg shadow-md bg-blue-200">
               <div className="text-xl font-mono font-bold">16K+</div>
               <div className="text-sm">
                 Regular Support from Non-resedential Indians

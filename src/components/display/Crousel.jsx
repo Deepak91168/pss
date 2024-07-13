@@ -1,31 +1,44 @@
 // src/components/ImageCarousel.jsx
 import React, { useState, useEffect } from "react";
-import logo from "../../assets/images/logo.png";
 import school1 from "../../assets/images/school1.jpg";
 import school2 from "../../assets/images/school2.jpg";
+import c1 from "../../assets/images/c1.png";
+import c2 from "../../assets/images/c2.png";
+import c3 from "../../assets/images/c3.png";
+import c4 from "../../assets/images/c4.jpg";
 import Quote from "./Quote";
-const images = [
-  logo, // replace with your image paths
-  school1,
-  school2,
-];
+const images = [school1, school2, c1, c2, c3, c4];
 const quote = [
   {
     description:
-      "Education is the most powerful weapon which you can use to change the world.",
-    author: "Nelson Mandela",
-  },
-  {
-    description:
       "The best way to find yourself is to lose yourself in the service of others.",
     author: "Mahatma Gandhi",
   },
   {
     description:
-      "The best way to find yourself is to lose yourself in the service of others.",
-    author: "Mahatma Gandhi",
+      "The function of education is to teach one to think intensively and to think critically. Intelligence plus character – that is the goal of true education.",
+    author: "Martin Luther King Jr.",
+  },
+  {
+    description:
+      "Children are the world's most valuable resource and its best hope for the future.",
+    author: "John F. Kennedy",
+  },
+  {
+    description:
+      "Service to others is the rent you pay for your room here on earth.",
+    author: "Muhammad Ali",
+  },
+  {
+    description: "An investment in knowledge pays the best interest.",
+    author: "Benjamin Franklin",
+  },
+  {
+    description: "Education is the key to unlock the golden door of freedom.",
+    author: "George Washington Carver",
   },
 ];
+
 const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -41,11 +54,12 @@ const ImageCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [currentIndex]);
+
   return (
-    <div className="relative w-full max-w-3xl mx-auto">
+    <div className="relative w-full mx-auto">
       <div className="overflow-hidden border-2 rounded-lg shadow-md relative">
         <img
           src={images[currentIndex]}
@@ -61,13 +75,13 @@ const ImageCarousel = () => {
       </div>
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white m-2 p-2 text-sm rounded-full"
+        className="absolute top-1/2 hidden left-0 transform -translate-y-1/2 bg-gray-800 text-white m-2 p-2 text-sm rounded-full"
       >
         &lt;
       </button>
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white m-2 p-2 text-sm rounded-full"
+        className="absolute top-1/2 hidden right-0 transform -translate-y-1/2 bg-gray-800 text-white m-2 p-2 text-sm rounded-full"
       >
         &gt;
       </button>

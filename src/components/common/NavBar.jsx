@@ -27,8 +27,8 @@ const NavBar = () => {
     }
   };
   return (
-    <nav className=" bg-white mt-2 relative">
-      <div className="flex justify-around  mx-auto xl:max-w-[75%]">
+    <nav className=" bg-white relative p-4">
+      <div className="flex justify-around  mx-auto xl:max-w-[75%] bg-white">
         <div className="flex justify-center items-center p-2">
           {/* <div>
             <img src="" alt="logo" />

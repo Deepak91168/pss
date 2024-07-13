@@ -7,8 +7,8 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 const Header = () => {
   return (
-    <div className="flex justify-around py-2 lg: max-w-[75%] mx-auto border-b-2">
-      <div className=" flex">
+    <div className="flex justify-around py-2 lg: max-w-[75%] mx-auto border-b-2 bg-white">
+      <div className=" flex bg-white">
         <div className="flex items-center px-2">
           <div className="p-1 border-2 rounded-full">
             <RiWhatsappFill className="text-lg text-[#25D366]" />
