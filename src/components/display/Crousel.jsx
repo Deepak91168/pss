@@ -64,7 +64,7 @@ const ImageCarousel = () => {
         <img
           src={images[currentIndex]}
           alt={`Slide ${currentIndex}`}
-          className="w-full h-64 object-cover filter brightness-50"
+          className="w-full h-72 object-cover filter brightness-50"
         />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <Quote
