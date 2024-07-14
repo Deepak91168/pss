@@ -33,10 +33,10 @@ const SocialMedia = () => {
     setIsPopupOpen(false);
   };
   return (
-    <>
+    <div className="z-100">
       <Popup isOpen={isPopupOpen} onClose={closePopup} />
       <div
-        className={` fixed flex flex-col justify-center items-center right-0 sm:right-2 bottom-2 z-10 p-4`}
+        className={` fixed flex flex-col justify-center items-center right-0 sm:right-2 bottom-2 z-20 p-4`}
       >
         {isHovered && (
           <div className="text-[10px] absolute -top-4 font-bold text-white bg-black p-2 rounded-md">
@@ -95,7 +95,7 @@ const SocialMedia = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

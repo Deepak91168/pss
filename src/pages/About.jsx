@@ -29,7 +29,7 @@ const About = () => {
 
   return (
     <div className="flex flex-col md:flex-row ">
-      <div className="bg-gradient-to-r from-black via-slate-800 to-slate-700 text-white w-full md:w-1/2 flex justify-center items-center">
+      <div className="bg-gradient-to-r from-slate-100 to-gray-300  w-full md:w-1/2 flex justify-center items-center">
         <div className="p-4 md:px-10 lg:px-12">
           <div className="w-full flex justify-center items-center">
             <img
@@ -70,7 +70,7 @@ const About = () => {
         </div>
       </div>
       <div className="flex flex-col w-full md:w-1/2">
-        <div className="bg-gradient-to-r from-blue-400 via-blue-300 to-blue-200 w-full flex justify-center items-center p-4">
+        <div className="bg-gradient-to-r from-gray-300 to-blue-200 w-full flex justify-center items-center p-4">
           <div className="md:px-10 lg:px-12">
             <div className="w-full flex justify-center items-center">
               <img
@@ -110,7 +110,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-200 w-full flex justify-center items-center p-4">
+        <div className="bg-gradient-to-r from-gray-300 to-yellow-200 w-full flex justify-center items-center p-4">
           <div className="md:px-10 lg:px-12">
             <div className="w-full flex justify-center items-center">
               <img

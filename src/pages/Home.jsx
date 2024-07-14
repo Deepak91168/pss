@@ -16,6 +16,7 @@ import PopUp from "../components/display/PopUp";
 import { SiIfood } from "react-icons/si";
 import { RiTreeFill } from "react-icons/ri";
 import { GiHealthNormal } from "react-icons/gi";
+import QuotedText from "../components/display/QuotedText";
 const faqData = [
   {
     question: "What is your return policy?",
@@ -35,7 +36,7 @@ const faqData = [
 const Home = () => {
   return (
     <div>
-      <div className="min-h-screen">
+      <div className="">
         <hr />
         <HeroSection />
 
@@ -93,11 +94,15 @@ const Home = () => {
             missionName="Developing Health and Wellness Programs for Students"
           />
         </div>
-        <div>
+        <div className="">
+          <QuotedText />
+        </div>
+
+        <div className="mt-4">
           <Crousel />
         </div>
       </div>
-      <div className="min-h-screen bg-slate-200 pb-4">
+      <div className=" bg-slate-200 pb-4 pt-6">
         <div className="text-center text-2xl font-bold pt-6">
           Our Achievements
           <div className="w-full ">
