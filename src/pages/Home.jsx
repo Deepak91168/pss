@@ -35,7 +35,7 @@ const faqData = [
 ];
 const Home = () => {
   return (
-    <div>
+    <div className="bg-gray-100">
       <div className="">
         <hr />
         <HeroSection />

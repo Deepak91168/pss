@@ -72,7 +72,7 @@ const NavBar = () => {
 
         {/* Mobile Menu Content (conditionally rendered) */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-white z-50 flex flex-col items-center justify-center">
+          <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-white z-50 flex flex-col items-center justify-center text-center">
             <AiOutlineClose
               className="absolute top-4 right-4 text-2xl cursor-pointer"
               onClick={toggleMobileMenu}
@@ -88,11 +88,11 @@ const NavBar = () => {
                   Mission
                 </Link>
               </li>
-              <li className={activePath("/news")}>
+              {/* <li className={activePath("/news")}>
                 <Link to="/news" onClick={toggleMobileMenu}>
                   News
                 </Link>
-              </li>
+              </li> */}
               <li className={activePath("/about")}>
                 <Link to="/about" onClick={toggleMobileMenu}>
                   About
@@ -125,9 +125,9 @@ const NavBar = () => {
             <li className={activePath("/mission")}>
               <Link to="/mission">Mission</Link>
             </li>
-            <li className={activePath("/news")}>
+            {/* <li className={activePath("/news")}>
               <Link to="/news">News</Link>
-            </li>
+            </li> */}
             <li className={activePath("/about")}>
               <Link to="/about">About</Link>
             </li>

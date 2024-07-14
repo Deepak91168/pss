@@ -55,7 +55,7 @@ const Contactus = () => {
   };
 
   return (
-    <div className="flex-col lg:flex lg:flex-row justify-center items-center p-6 pb-8">
+    <div className="flex-col lg:flex lg:flex-row justify-center items-center p-6 pb-8 h-screen">
       <div className="border-2 shadow-md m-4 rounded-lg p-4 hover:shadow-xl hover:scale-[1.01] transition-all ease-in-out duration-500">
         <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-blue-400 to-teal-400 font-bold text-xl">
           Contact Us
