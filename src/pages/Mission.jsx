@@ -9,6 +9,7 @@ import diversityImage from "../assets/images/diversity.jpg";
 import accImage from "../assets/images/acc.jpg";
 import equality from "../assets/images/equality.webp";
 import { GoGoal } from "react-icons/go";
+
 const Mission = () => {
   return (
     <div>

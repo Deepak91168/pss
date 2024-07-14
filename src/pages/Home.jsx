@@ -13,6 +13,9 @@ import Quote from "../components/display/Quote";
 import Crousel from "../components/display/Crousel";
 import { FaRupeeSign } from "react-icons/fa";
 import PopUp from "../components/display/PopUp";
+import { SiIfood } from "react-icons/si";
+import { RiTreeFill } from "react-icons/ri";
+import { GiHealthNormal } from "react-icons/gi";
 const faqData = [
   {
     question: "What is your return policy?",
@@ -39,38 +42,55 @@ const Home = () => {
         <div className="flex flex-col flex-wrap sm:flex-row justify-center items-center mx-auto p-2 sm:p-2 w-full md:max-w-[100%] xl:max-w-[60%]">
           <MissionCard
             customClass={"flex justify-center bg-yellow-700 item-center"}
-            icon={<IoSchool className="text-4xl" />}
+            icon={<IoSchool className="text-2xl sm:text-4xl" />}
             missionName="Bulding world class Infracture for education and Training"
           />
           <MissionCard
             customClass={"flex justify-center bg-pink-700 item-center"}
-            icon={<MdSportsMartialArts className="text-4xl" />}
+            icon={<MdSportsMartialArts className="text-2xl sm:text-4xl" />}
             missionName="Focuses on overall personality development of individual"
           />
           <MissionCard
             customClass={"flex justify-center bg-blue-700 item-center"}
-            icon={<LiaChalkboardTeacherSolid className="text-4xl" />}
+            icon={
+              <LiaChalkboardTeacherSolid className="text-2xl sm:text-4xl" />
+            }
             missionName="Provide high quality education both online and offline"
           />
           <MissionCard
             customClass={"flex justify-center bg-cyan-800 item-center"}
-            icon={<BiSolidDonateHeart className="text-4xl" />}
+            icon={<BiSolidDonateHeart className="text-2xl sm:text-4xl" />}
             missionName="Even a small donation can change lives of many famalies"
           />
           <MissionCard
             customClass={"flex justify-center bg-yellow-600 item-center"}
-            icon={<FaWheelchair className="text-4xl" />}
+            icon={<FaWheelchair className="text-2xl sm:text-4xl" />}
             missionName="Training, Employment and Education for differently abled"
           />
           <MissionCard
             customClass={"flex justify-center bg-red-600 item-center"}
-            icon={<MdConstruction className="text-4xl" />}
+            icon={<MdConstruction className="text-2xl sm:text-4xl" />}
             missionName="Develop real-world skills and secure employment opportunities"
           />
           <MissionCard
             customClass={"flex justify-center bg-blue-800 item-center"}
-            icon={<FaRupeeSign className="text-4xl" />}
+            icon={<FaRupeeSign className="text-2xl sm:text-4xl" />}
             missionName="Providing Financial assistance to the poor and needy"
+          />
+          <MissionCard
+            customClass={"flex justify-center bg-green-800 item-center"}
+            icon={<SiIfood className="text-2xl sm:text-4xl" />}
+            missionName="Providing Nutritious Meals to Primary School Children"
+          />
+          <MissionCard
+            customClass={"flex justify-center bg-pink-800 item-center"}
+            icon={<RiTreeFill className="text-2xl sm:text-4xl" />}
+            missionName="Promoting Sustainable and Environment-Friendly Educational Practices"
+          />
+          <MissionCard
+            customClass={"flex justify-center bg-red-700 item-center"}
+            icon={<GiHealthNormal className="text-2xl sm:text-4xl" />}
+            missionName="Developing Health and Wellness Programs for Students"
           />
         </div>
         <div>
