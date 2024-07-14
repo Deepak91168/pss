@@ -9,20 +9,24 @@ const FAQ = ({ faqData }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-100 p-4">
+    <div className="flex flex-col items-center justify-center bg-gray-50 p-6 sm:p-10">
       <div className="w-full max-w-2xl">
-        <h2 className="text-2xl font-bold text-center mb-8">
+        <h2 className="text-xl font-semibold text-center mb-6 text-gray-800">
           Frequently Asked Questions
         </h2>
         {faqData.map((item, index) => (
-          <div key={index} className="bg-white rounded-lg shadow mb-4">
-            <div
-              className="p-4 cursor-pointer flex justify-between items-center"
+          <div key={index} className="bg-white rounded-md shadow-sm mb-2">
+            <button
+              className="p-3 w-full text-left cursor-pointer flex justify-between items-center"
               onClick={() => handleToggle(index)}
+              aria-expanded={activeIndex === index}
+              aria-controls={`faq-content-${index}`}
             >
-              <span className="text-sm font-medium">{item.question}</span>
+              <span className="text-base font-sm text-gray-800">
+                {item.question}
+              </span>
               <svg
-                className={`w-6 h-6 transform transition-transform duration-300 ${
+                className={`w-4 h-4 transform transition-transform duration-300 ${
                   activeIndex === index ? "rotate-180" : "rotate-0"
                 }`}
                 fill="none"
@@ -37,9 +41,12 @@ const FAQ = ({ faqData }) => {
                   d="M19 9l-7 7-7-7"
                 />
               </svg>
-            </div>
+            </button>
             {activeIndex === index && (
-              <div className="p-4 border-t text-sm border-gray-200">
+              <div
+                id={`faq-content-${index}`}
+                className="p-3 border-t text-sm border-gray-200 transition-max-height duration-300 ease-in-out"
+              >
                 <p className="text-gray-700">{item.answer}</p>
               </div>
             )}
